@@ -3,7 +3,7 @@
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2aRJR6dWUGsjhkUzKkGp-3787npBEJcJblg&s)
 
 ## 스냅샷
-- 마치 폴라로이드 카메라로 풍경을 기록하듯이 **파일의 상태를 기록**하는 시스템.
+- 마치 폴라로이드 카메라로 풍경을 기록하듯이 **파일의 상태를 기록**하는 시스템
 - **한 번 기록하면 변경할 수 없다.**
 
 ## 3가지 영역
