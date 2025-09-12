@@ -1,0 +1,72 @@
+/* class에 대한 css는 .을 붙여서 사용 */
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.font-100 {
+  font-size: 100px;
+}
+.font-50 {
+  font-size: 50px;
+}
+
+/* id에 대한 css는 #을 붙여서 사용 */
+#bold {
+  font-weight: 900;
+}
+
+/* 속성에 대한 css 적용은 [] 안에서 사용 */
+[href] {
+  text-decoration: none; /* 하이퍼링크의 밑줄 제거*/
+  font-size: 30px;
+}
+
+[href="https://www.naver.com"]
+{
+  color: green;
+}
+
+/* 부모가 div인 p 태그를 선택 */
+div > p {
+  font-style: italic; /* 기울임 폰트 */
+}
+
+/* id가 parent인 요소의 자식 중 class가 child인 요소에 적용 */
+#parent > .child {
+  color: violet;
+}
+
+/* 후손은 > 사용 X. body 내부의 모든 p 태그에 적용 */
+body p {
+  font-weight: 900;
+}
+
+/* 혼합 선택자, p 태그 */
+span.red {
+  color: lightcoral;
+}
+
+span.green {
+  color: lightgreen;
+}
+
+#font-100 {
+  font-size: 100px;
+}
+
+.font-90 {
+  font-size: 90px;
+}
+
+div {
+  font-size: 50px;
+}
+
+div {
+  font-size: 30px;
+}
