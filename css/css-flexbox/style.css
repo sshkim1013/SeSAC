@@ -1,0 +1,100 @@
+.flex-container {
+  display: flex; /* flex-container로 설정 */
+  background-color: bisque;
+
+  width: 100vw;
+  height: 500px;
+}
+
+/* flex-item의 배치(정렬) 방향 */
+.d-row {
+  /* default 값: row */
+  flex-direction: row;
+}
+
+.d-row-reverse {
+  /* 행, 역방향: 오른쪽 -> 왼쪽 */
+  flex-direction: row-reverse;
+}
+
+.d-col {
+  /* 열, 정방향 */
+  flex-direction: column;
+}
+
+.d-col-reverse {
+  /* 열, 역방향 */
+  flex-direction: column-reverse;
+}
+
+/* flex-item의 배치(정렬) 방식 */
+.flex-start {
+  /* justify-content 속성 */
+  /* 주축을 기준으로 한 배치 방식 */
+  justify-content: flex-start; /* flex-start가 기본 값 */
+}
+
+.flex-end {
+  /* start가 왼쪽이면, 그 반대쪽인 오른쪽에서 시작된다. */
+  justify-content: flex-end;
+}
+
+.center {
+  /* 주축 방향 중앙 정렬 */
+  justify-content: center;
+}
+
+/* 두 개의 아이템을 양끝에 붙이고,
+   아이템 사이에 동일한 간격을 배치 */
+.space-between {
+  justify-content: space-between;
+}
+
+/* 양옆을 동일한 간격으로 배치 */
+.space-around {
+  justify-content: space-around;
+}
+
+/* 아이템 간의 모든 간격을 동일하게 배치*/
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+/* 교차축 배치(정렬) 방식 */
+.align-center {
+  /* align-items */
+  align-items: center; /* 교차축 방향 중앙 정렬 */
+}
+
+/* 아이템의 줄바꿈 여부 */
+.flex-wrap {
+  /* 너비(높이)보다
+  내부 아이템의 너비(높이) 합이 크면
+  여러 줄 배치 */
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  /* 너비(높이)보다
+  내부 아이템의 너비(높이) 합이 크면
+  내부 아이템의 너비(높이)를 줄여서
+  한 줄에 배치 */
+  flex-wrap: nowrap;
+}
+
+.big-box {
+  background-color: aqua;
+  width: 500px;
+  height: 100px;
+  margin: 20px;
+}
+
+.box {
+  background-color: lightblue;
+  width: 100px;
+  height: 200px;
+  margin: 20px;
+  /* flex-item 은 별도의 display 를 설정하지 않아도 된다. */
+  /* [ 이유 ] 부모가 display: flex;라면, 
+          자동으로 flex-item 이 된다. */
+}
