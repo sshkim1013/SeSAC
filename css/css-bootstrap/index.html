@@ -18,7 +18,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-      <a href="https://www.facebook.com/?locale=ko_KR" class="btn btn-primary">Facebook</a>
+    <a href="https://www.facebook.com/?locale=ko_KR" class="btn btn-primary"
+      >Facebook</a
+    >
 
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-indicators">
@@ -120,14 +122,38 @@
       <!-- .row: 플렉스 컨테이너 -->
       <div class="row gap-3">
         <!-- .col: 플렉스 아이템 -->
-        <div class="col-6 bg-success">col</div>
+
         <!-- col-6: 12 컬럼 중 6칸을 가져간다. -->
-        <div class="col bg-success">col</div>
+        <div class="col-6 bg-success">col</div>
+
         <!-- 2칸 -->
         <div class="col bg-success">col</div>
-        <!-- 2칸 -->
         <div class="col bg-success">col</div>
-        <!-- 2칸 -->
+        <div class="col bg-success">col</div>
+      </div>
+
+      <!-- row 플렉스 컨테이너 -->
+      <div class="row gap-3">
+        <!-- 화면 사이즈가 768 미만이 되면 6,6,6,6 -->
+        <!-- 화면 사이즈가 768 이상이 되면 4,4,4,4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 col-xxl-1 bg-danger">
+          col-6 col-md-4
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 col-xxl-1 bg-danger">
+          col-6 col-md-4
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 col-xxl-1 bg-danger">
+          col-6 col-md-4
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 col-xxl-1 bg-danger">
+          col-6 col-md-4
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 col-xxl-1 bg-danger">
+          col-6 col-md-4
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 col-xxl-1 bg-danger">
+          col-6 col-md-4
+        </div>
       </div>
     </div>
   </body>
