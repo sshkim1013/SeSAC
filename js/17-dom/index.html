@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- axios CDN 링크 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <button>API 요청</button>
+    <div id="parent"></div>
+    <script>
+      // 아래 코드는 작동 X (자바스크립트 파일이 아니라서)
+      // import axios from "axios";
+
+      // API 사용을 위한 기본 주소(URL)
+      const DOMAIN_NAME = "https://dummyjson.com";
+
+      // id="parent"인 요소를 선택
+      // - DOM API 문법 사용 시, 부모 div 태그는 꼭 필요하다!!!!!
+      // - 해당 div 태그 내에서 작업을 수행해야 하기 때문!!!!!
+      const parentTag = document.querySelector("#parent");
+
+      // 상품 목록을 요청할 비동기 함수
+      async function getProducts() {
+        // url: API 요청 주소
+        // method: 요청 방법
+        // 완성된 URL : https://dummyjson.com/products
+        const config = { url: `${DOMAIN_NAME}/products`, method: "get" };
+        const response = await axios(config);
+
+        // 응답 데이터에서 data 속성 추출
+        const data = response["data"];
+
+        // data 객체에서 products 속성 추출
+        const products = data["products"];
+        console.log(products);
+
+        // 배열 고차 메서드를 사용해서 배열 데이터인 products 를 반복
+        products.forEach((element) => {
+          // 매개변수 element: 배열에 저장된 개별 상품 객체
+          // 상품(element) 정보에서 이름(title) 속성 추출
+          const title = element["title"];
+
+          // p 태그 선택 후 변수에 할당
+          const pTag = document.createElement("p");
+          pTag["textContent"] = title;
+
+          // id="parent"인 요소에 p 태그 추가(append() 사용)
+          parentTag.append(pTag);
+        });
+      }
+
+      // 태그명이 button인 요소의 click 이벤트가 발생했을 때
+      // 함수 getProducts() 호출 코드 작성
+
+      // -------------------------------------------------------------------
+
+      // 1. 태그명이 button인 요소를 선택
+      // 2. 요소를 변수에 할당(저장)
+      const buttonTag = document.querySelector("button");
+      // 3. addEventListener() 메서드로 요소에 click 이벤트에 대한 핸들러 등록
+      buttonTag.addEventListener("click", () => {
+        getProducts();
+      });
+
+      // -------------------------------------------------------------------
+
+      // 통신 연결 테스트 함수
+      async function testConnect() {
+        // 요청 주소 => url
+        // 요청 방법 => method
+        const config = { url: `${DOMAIN_NAME}/test`, method: "get" };
+
+        // axios를 활용해서 API 요청(클라이언트 -> 서버)
+        // 요청에 대한 응답을 변수 response 에 저장
+        const response = await axios(config);
+        console.log(response["data"]);
+      }
+      // testConnect();
+    </script>
+  </body>
+</html>
