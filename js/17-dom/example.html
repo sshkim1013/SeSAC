@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <html>
+      <body>
+        <div id="container">
+          <h1>Hello, World!</h1>
+        </div>
+        <script>
+          // DOM API 시작
+          // document : DOM을 사용하는 코드.
+          const container = document.querySelector("#container"); // id="container" 인 div
+          const newH1 = document.createElement("h1"); // 생성할 요소의 태그는 h1로 설정
+
+          newH1["textContent"] = "Hello, DOM!"; // "Hello, DOM!" 이라는 텍스트를 설정
+
+          container.appendChild(newH1); // 위 과정으로 생성된 newH1을 container의 자식으로 삽입
+          // DOM API 끝
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
