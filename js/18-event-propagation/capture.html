@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 18-event-propagation/capture.html -->
+    <div id="parent">
+      <div id="child">
+        <button id="button">클릭</button>
+      </div>
+    </div>
+    <script>
+      // 각 요소를 id 선택자를 활용해서 선택(querySelector)하고, 변수에 할당
+      const parent = document.querySelector("#parent");
+      const child = document.querySelector("#child");
+      const button = document.querySelector("#button");
+
+      // 3개의 요소에 각각 이벤트 핸들러 등록
+      // 세 번째 매개변수는 { capture: true } 로 설정 (캡쳐링)
+      // 참고로 아래 코드에서 { capture: true } 만 지우면 버블링이다.
+      parent.addEventListener(
+        "click",
+        (e) => {
+          console.log("parent");
+        },
+        { capture: true }
+      );
+      child.addEventListener(
+        "click",
+        (e) => {
+          console.log("child");
+        },
+        { capture: true }
+      );
+      button.addEventListener(
+        "click",
+        (e) => {
+          console.log("button");
+        },
+        { capture: true }
+      );
+    </script>
+  </body>
+</html>
