@@ -21,17 +21,17 @@
         // 기본 동작(이벤트) 막기
         e.preventDefault();
 
-        // 위의 preventDefault() 메서드를 사용하지 않으면
-        // 콘솔에 "제출"이 나타났다가 바로 사라짐. - 기본 동작
-        console.log("제출");
+        // // 위의 preventDefault() 메서드를 사용하지 않으면
+        // // 콘솔에 "제출"이 나타났다가 바로 사라짐. - 기본 동작
+        // console.log("제출");
 
-        // form 태그가 가진 모든 입력 요소를 가지고 있음.
-        // 여기서는 3개의 input 태그
-        console.log(formTag["elements"]);
+        // // form 태그가 가진 모든 입력 요소를 가지고 있음.
+        // // 여기서는 3개의 input 태그
+        // console.log(formTag["elements"]);
 
-        // name 속성이 password인 요소의 value 속성 출력
-        const value = formTag["elements"]["password"]["value"];
-        console.log(value);
+        // // name 속성이 password인 요소의 value 속성 출력
+        // const value = formTag["elements"]["password"]["value"];
+        // console.log(value);
 
         // ------------------------------
 
@@ -40,13 +40,13 @@
         // name 속성이 password-confirm 인 입력 요소의 값이
         // 동일한지 확인하는 코드를 작성
         // 같으면 "같습니다" 출력 / 다르면 "다릅니다" 출력
-        // const password = formTag["elements"]["password"];
-        // const pwConfirm = formTag["elements"]["password-confirm"];
-        // if (password["value"] === pwConfirm["value"]) {
-        //   console.log("같습니다");
-        // } else {
-        //   console.log("다릅니다");
-        // }
+        const password = formTag["elements"]["password"];
+        const pwConfirm = formTag["elements"]["password-confirm"];
+        if (password["value"] === pwConfirm["value"]) {
+          console.log("같습니다");
+        } else {
+          console.log("다릅니다");
+        }
       });
     </script>
   </body>
