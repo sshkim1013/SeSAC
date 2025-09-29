@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function OnChange() {
   // change 이벤트의 핸들러 함수 정의
   // 핸들러 함수 이름 규칙: [handle이벤트명]
