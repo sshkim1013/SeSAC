@@ -1,11 +1,11 @@
 import React from "react";
 
-import CardContainer from "./components/PropsFunction/CardContainer";
+import Parent from "./components/PropsChildren/Parent";
 
 export default function App() {
   return (
     <div>
-      <CardContainer></CardContainer>
+      <Parent></Parent>
     </div>
   );
 }
