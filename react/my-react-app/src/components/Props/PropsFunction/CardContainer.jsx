@@ -1,7 +1,7 @@
 import React from "react";
 
 import Card from "./Card";
-import OnClick from "../EventHandling/OnClick";
+import OnClick from "../../EventHandling/OnClick";
 
 export default function CardContainer() {
   function handleClick(user) {
