@@ -11,7 +11,7 @@ export default function MovieList() {
       // 모듈화 된 함수는 Promise 기반이라서
       // await 키워드 필수!
       const response = await getPopularMovies();
-      setMovies(response["data"]["results"]);
+      setMovies(response["results"]);
     }
 
     fetchData();

@@ -8,7 +8,7 @@ import axiosInstance from "./index";
 export async function getPopularMovies() {
   const config = {
     method: "GET",
-    url: `/movie/popular`,
+    url: `/movie/popul`,
     params: {
       page: 1,
     },
