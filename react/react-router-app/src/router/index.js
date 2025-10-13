@@ -9,6 +9,8 @@ import ProtectedLayout from "../layout/ProtectedLayout";
 import Home from "../pages/RootPages/Home";
 import About from "../pages/RootPages/About";
 import Profile from "../pages/RootPages/Profile";
+import PostList from "../pages/RootPages/PostList";
+import PostDetail from "../pages/RootPages/PostDetail";
 
 import AuthHome from "../pages/AuthPages/AuthHome";
 import Signup from "../pages/AuthPages/Signup";
@@ -29,8 +31,16 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/about",
+        path: "about",
         Component: About,
+      },
+      {
+        path: "posts",
+        Component: PostList,
+      },
+      {
+        path: "posts/:postId",
+        Component: PostDetail,
       },
       {
         // path 속성 작성 X
