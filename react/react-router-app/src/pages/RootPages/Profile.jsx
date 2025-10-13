@@ -1,6 +1,5 @@
 // Navigate 컴포넌트 불러오기
 import { Navigate } from "react-router-dom";
-
 import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
