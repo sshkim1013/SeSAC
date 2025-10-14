@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 // useSearchParams 훅 : 쿼리 파라미터 관리
 import { useSearchParams } from "react-router-dom";
 
+// 경로 상수 불러오기
+import PATHS from "../../constants/paths";
+
 const BASE_URL = `https://dummyjson.com`;
 
 export default function PostList() {
