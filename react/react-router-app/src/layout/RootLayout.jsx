@@ -10,8 +10,8 @@ export default function RootLayout() {
         <Link to="/">홈페이지</Link>
         {/* 절대 경로로 표현한 경로(path) */}
         {/*  */}
-        <Link to={PATHS["ROOT"]["INDEX"]}>소개 페이지</Link>
-        <Link to={PATHS["ROOT"]["ABOUT"]}>사용자 정보 페이지</Link>
+        <Link to={PATHS["ROOT"]["ABOUT"]}>소개 페이지</Link>
+        <Link to={PATHS["ROOT"]["PROFILE"]}>사용자 정보 페이지</Link>
         <Link to={PATHS["AUTH"]["INDEX"]}>인증 페이지</Link>
         <Link to={PATHS["ROOT"]["POSTS"]}>게시글 목록 페이지</Link>
       </div>
