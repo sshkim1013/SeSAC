@@ -15,7 +15,7 @@ const PATHS = {
     // 외부에서 postId를 전달 받아서
     // 동적으로 경로 파라미터를 적용한 주소 생성
     // 컴포넌트에서 사용할 경로 파라미터 주소 생성 메서드
-    getPostDetail: (postId) => `posts/${postId}`,
+    getPostDetail: (postId) => `/posts/${postId}`,
 
     PROFILE: "/profile",
   },
