@@ -21,8 +21,8 @@ export default function PostList() {
   useEffect(() => {
     // searchParams.get(쿼리_파라미터_키)
     // 쿼리 파라미터에서 key가 order인 값을 불러오기
-    const order = searchParams.get("order") ?? "id"; // Nullish 연산자를 통해 기본값을 지정
-    const sortBy = searchParams.get("sortBy") ?? "asc";
+    const order = searchParams.get("order") ?? "asc"; // Nullish 연산자를 통해 기본값을 지정
+    const sortBy = searchParams.get("sortBy") ?? "id";
 
     async function getPosts() {
       const response = await axios.get(
