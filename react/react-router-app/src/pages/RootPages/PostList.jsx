@@ -18,7 +18,7 @@ export default function PostList() {
   useEffect(() => {
     // searchParams.get(쿼리_파라미터_키)
     // 쿼리 파라미터에서 key가 order인 값을 불러오기
-    const order = searchParams.get("order") ?? "id";  // Nullish 연산자를 통해 기본값을 지정
+    const order = searchParams.get("order") ?? "id"; // Nullish 연산자를 통해 기본값을 지정
     const sortBy = searchParams.get("sortBy") ?? "asc";
 
     async function getPosts() {
@@ -57,7 +57,7 @@ export default function PostList() {
       </div>
       {posts.map((post) => {
         return (
-          <Link to={`/posts/${post["id"]}`} key={post["id"]}>
+          <Link to={PATHS["ROOT"].getPostDetail(post["id"])} key={post["id"]}>
             {post["id"]}. {post["title"]} <br />
           </Link>
         );
