@@ -10,6 +10,11 @@ export default function PostDetail() {
 
   // 경로 파라미터 값 불러오기
   // 라우터 설정에서 설정한 파라미터명과 동일한 변수명을 사용(postId)
+  // 경로 패턴: POSTS_DETAIL: "/posts/:postId",
+  // 생성되는 객체(예시)
+  /*
+  {postId: 3}
+   */
   const { postId } = useParams();
   useEffect(() => {
     async function getPost() {
