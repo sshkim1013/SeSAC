@@ -16,6 +16,11 @@ import router from "./router";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor } from "./store";
 
+// 스토어(store) 설정
+import { store } from "./store";
+
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
