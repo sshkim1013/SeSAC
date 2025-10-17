@@ -9,6 +9,7 @@ export default function ChatMessage({ message }) {
 
   return (
     // 메세지 role에 따라 정렬 방향 결정
+    // 유저의 채팅은 오른쪽, AI의 채팅은 왼쪽
     <div className={`mt-16 flex ${isUser ? "justify-end" : "justify-start"}`}>
       {/* AI 메세지 : 마크다운 표현 */}
       {/* 사용자 메세지 : 일반 텍스트 표현 */}
